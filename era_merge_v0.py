@@ -7,7 +7,9 @@ from tkinter import filedialog
 
 
 # Asks the used to select the folder containing the ERA5 csv download files.
-directory = filedialog.askdirectory()
+directory = filedialog.askdirectory(
+    title="Select the folder containing the monthly .csv files."
+)
 
 # TODO: Create a regular expression for the monthly ERA5 download csv files. They all start with ERA5_ then some numbers and finished with .netcdf.csv
 era_regex = re.compile(r"^(ERA5_)(\d{4})(\d{1,2})\.netcdf.csv$")
