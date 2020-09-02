@@ -10,7 +10,7 @@ from tkinter import filedialog
 directory = filedialog.askdirectory()
 
 # TODO: Create a regular expression for the monthly ERA5 download csv files. They all start with ERA5_ then some numbers and finished with .netcdf.csv
-era_regex = re.compile(r"(ERA5_)(\d{4})(\d+)\.netcdf.csv")
+era_regex = re.compile(r"^(ERA5_)(\d{4})(\d{1,2})\.netcdf.csv$")
 
 # TODO: Loop through files within the selected directory and save the file names that match the era5 regular expression.
 # The regular expression should have groups so that we can isolate the part of the file name with the year and month to organise the files in order of olders to recent.
