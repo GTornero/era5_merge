@@ -3,8 +3,13 @@
 import csv
 import re
 import os
+
+import tkinter as tk
 from tkinter import filedialog
 
+
+root = tk.Tk()
+root.iconbitmap('OW_logo.ico')
 
 # Asks the used to select the folder containing the ERA5 csv download files.
 directory = filedialog.askdirectory(
